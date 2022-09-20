@@ -14,27 +14,42 @@ const images = [
 ];
 
 
+// const ulElement = document.querySelector("ul");
+
+// const elements = images.map(option => {
+  
+//   const imgElement = document.createElement("img");
+//   imgElement.classList.add("gallery__img");
+//   imgElement.src = option.url;
+//   imgElement.alt = option.alt;
+ 
+//   ulElement.append(imgElement);
+
+//   return imgElement;
+
+// });
+
+// console.log(elements);
+// ulElement.append(...elements);
 
 
 const ulElement = document.querySelector("ul");
- 
-// const liElement = document.createElement("li");
 
 const elements = images.map(option => {
-  
+  const liElement = document.createElement("li");
   const imgElement = document.createElement("img");
   imgElement.classList.add("gallery__img");
   imgElement.src = option.url;
   imgElement.alt = option.alt;
  
-  ulElement.append(imgElement);
+  ulElement.append(liElement, imgElement);
 
   return imgElement;
-
+  
 });
 
 console.log(elements);
+// ulElement.append(...elements);
 
-ulElement.append(...elements);
 
 
