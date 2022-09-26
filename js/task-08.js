@@ -1,8 +1,12 @@
 
 
 const form = document.querySelector(".login-form");
+// const inputs = document.querySelectorAll('input');
+
+
 
 form.addEventListener("submit", onFormSubmit);
+
 function onFormSubmit(event) {
   event.preventDefault();
   
@@ -15,6 +19,19 @@ function onFormSubmit(event) {
     console.log("onFormSubmit -> value", value);
 
     event.currentTarget.reset();
-  });
+
+    
+    
+  }); 
   
 }
+
+// inputs.foreach(input => {
+//   if (input.value.trim() === '') {
+//     alert("error")
+//   }
+// });
+
+
+
+
