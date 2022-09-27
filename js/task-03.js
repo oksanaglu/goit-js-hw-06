@@ -21,10 +21,17 @@ document .querySelector
     
 console.log(images);
 
+const ulElement = document.querySelector("ul");
+ulElement.style.textAlign = "center";
+ulElement.style.listStyle = "none";
 
 
 
-// const ulElement = document.querySelector("ul");
+
+
+
+
+
 
 // const elements = images.map(option => {
   

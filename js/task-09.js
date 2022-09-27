@@ -1,41 +1,43 @@
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  
+
+
+const button = document.querySelector('.change-color');
+const body = document.querySelector('body');
+const value = document.querySelector('.color');
+
+const getRandomHexColor = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+
+button.addEventListener('click', changeHex);
+
+
+function changeHex() {
+  let hex = '#';
+
+  for(let i = 0; i < 6; i++){
+    const index = Math.floor(Math.random() * getRandomHexColor.length)
+    hex += getRandomHexColor[index];
+  }
+
+  value.textContent = hex;
+  body.style.backgroundColor = hex;
+}
+
+
+
+
+
+
+
+
+
+
+// const genNew = document.querySelector(".change-color");
+
+// const setBg = () => {
+//   const randomColor = Math.floor(Math.random()*16777215).toString(16);
+//   document.body.style.backgroundColor = "#" + randomColor;
+//   color.innerHTML = "#" + randomColor;
 // }
 
-
-//  function changecolor(e)
-//       {
-//        e.preventDefault();
-
-//        const input = this.elements[0];
-//        document.body.style.backgroundColor = input.value;
-//        input.value = '';
-//        input.focus();
-// }
-    
-// function getRandomHexColor()
-// {
-//     const randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-//     if(randomColor.length != 7){ // In any case, the color code is invalid
-//         randomColor = getRandomHexColor();
-//     }
-//     return randomColor;
-//     // The random color will be freshly served
-// }
-// document.body.style.backgroundColor = getRandomHexColor()
-
-
-// function getRandomColor()
-// {
-//     var color = "#";
-
-//     for (var i = 0; i < 3; i++)
-//     {
-//         var part = Math.round(Math.random() * 255).toString(16);
-
-//         color += (part.length > 1) ? part : "0" + part;
-//     }
-
-//     return color;
-// }
+// genNew.addEventListener("click", setBg);

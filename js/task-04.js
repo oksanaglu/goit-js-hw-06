@@ -20,6 +20,12 @@ wrap_button.sub.addEventListener('click', increment);
 wrap_button.add.addEventListener('click', decrement);
 
 
+
+
+
+
+
+
 // var counterValue = 0;
 // function increment(){
 // 	counterValue +=1;
