@@ -14,40 +14,13 @@ const images = [
 ];
 
 
-
-for ( let el of images ) 
-document .querySelector
-    ('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src ="${el.url}" alt ="${el.alt}" width ="${600}"></li>`);
-    
-console.log(images);
-
-const ulElement = document.querySelector("ul");
+const ulElement = document.querySelector('.gallery');
+const imgElement = images.map(el => {
+  return `<li><img src ="${el.url}" alt ="${el.alt}" width ="${600}"></li>`
+}).join('')
+ulElement.insertAdjacentHTML("beforeend", imgElement);
 ulElement.style.textAlign = "center";
 ulElement.style.listStyle = "none";
-
-
-
-
-
-
-
-
-
-// const elements = images.map(option => {
-  
-//   const imgElement = document.createElement("img");
-//   imgElement.classList.add("gallery__img");
-//   imgElement.src = option.url;
-//   imgElement.alt = option.alt;
- 
-//   ulElement.append(imgElement);
-
-//   return imgElement;
-
-// });
-
-// console.log(elements);
-// ulElement.append(...elements);
 
 
 
